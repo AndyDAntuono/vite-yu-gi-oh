@@ -20,3 +20,7 @@ Numero di push minimo: 12
 - all'interno della costante store copio ed incollo l'indirizzo url per l'API fornitoci dalla consegna
 - sempre all'interno della costante stor creo un array vuoto intitolato cardsList
 - installo axios per effetuare le chiamate
+- creo i fle App.vue ed importo al suo interno axios
+- creo il metodo getCardsList affinché invii una richiesta HTTP GET all'URL che si trova all'interno a store.js 
+- credo i file AppHeader.vue, CardsList.vue, YugiohCard.vue
+- verifico il collegamento tra AppHeader.vue e CardList.vue con App.vue. Prima scrivo qualcosa nei rispettivi template di AppHeader.vue e Cardlist.vue, dopo di che li registro in App.vue. Nella sezione template di ques'ultimo scrivo AppHeader e Cardlist come se fossero dei tag. In questo il browser mi dovrebbe mostrare cosa ho scittto  eni template di AppHeader.vue e CardList.vue 

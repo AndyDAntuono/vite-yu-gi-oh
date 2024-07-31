@@ -14,7 +14,9 @@ export default {
   },
   methods: {
     getCardsList(){
+      // Effettua una richiesta GET all'URL specificato da store.apiUrl utilizzando Axios
       axios.get(store.apiUrl).then((result) => {
+        //Se la richiesta ha successo, assegna i dati ottenuti (result.data.data) a store.cardsList
         store.cardsList = result.data.data;
       });
     }
