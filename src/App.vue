@@ -12,7 +12,7 @@ export default {
   methods: {
     getCardsList(){
       axios.get(store.apiUrl).then((result) => {
-        store.cardsList = result.data.results
+        store.cardsList = result.data.data;
       });
     }
   },
