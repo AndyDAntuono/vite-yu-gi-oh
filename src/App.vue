@@ -17,6 +17,7 @@ export default {
       // Effettua una richiesta GET all'URL specificato da store.apiUrl utilizzando Axios
       axios.get(store.apiUrl).then((result) => {
         //Se la richiesta ha successo, assegna i dati ottenuti (result.data.data) a store.cardsList
+        //this.cardsList = result.data.data;
         store.cardsList = result.data.data;
       });
     }
@@ -24,7 +25,7 @@ export default {
   data() {
     return {
       store,
-
+      //cardsList: []
     }
   }
 }
@@ -33,8 +34,10 @@ export default {
 
 <template>
   <AppHeader />
-  <CardsList />
-
+  <main>
+    <!-- <CardsList :cards="cardsList"/> -->
+    <CardsList />
+  </main>
 </template>
 
 <style lang="scss" scoped>

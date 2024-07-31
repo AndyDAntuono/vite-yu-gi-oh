@@ -1,7 +1,9 @@
 <template>
     <div class="container">
         <div class="row">
-            <!--Per ora ottengo solo il nome delle carte poiché non ho ancora modellato alcun contenitore per ospitare gli alti dati delle carte di Yu-Gi-Oh-->
+            <!--<div class="col-4" v-for="card in cards" :key="card.id">
+                {{ card.name }}
+            </div>-->
             <div class="col-4" v-for="card in store.cardsList" :key="card.id">
                 {{ card.name }}
             </div>
@@ -11,7 +13,13 @@
 <script>
 import { store } from '../store';
 
+//import { store } from '../store';
+
 export default {
+    //props: {
+    //    cards: Array
+    //},
+
     data() {
         return {
             store
