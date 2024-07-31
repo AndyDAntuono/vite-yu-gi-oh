@@ -18,3 +18,5 @@ Numero di push minimo: 12
 - innanzitutto creo un file intitolato store.js che ricoprià il ruolo di state mangagement.
 - all'interno di store.js, importo il metodo reactive che ci permette di creare un oggetto reattivo, ovvero una costante che chiamerò store.
 - all'interno della costante store copio ed incollo l'indirizzo url per l'API fornitoci dalla consegna
+- sempre all'interno della costante stor creo un array vuoto intitolato cardsList
+- installo axios per effetuare le chiamate
