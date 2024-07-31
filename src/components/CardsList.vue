@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        
+        Prova colleggamento a App.vue
     </div>
 </template>
 <script>

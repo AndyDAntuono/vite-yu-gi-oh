@@ -2,10 +2,12 @@
 import { store } from './store.js';
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
+import CardsList from './components/CardsList.vue';
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    CardsList,
   },
   created() {
     this.getCardsList()
@@ -29,11 +31,7 @@ export default {
 
 <template>
   <AppHeader />
-  <div class="container">
-    <div class="row">
-      
-    </div>
-  </div>
+  <CardsList />
 
 </template>
 
