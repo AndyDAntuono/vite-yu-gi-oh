@@ -10,7 +10,8 @@ export default {
     CardsList,
   },
   created() {
-    this.getCardsList()
+    this.getCardsList(),
+    this.selectArchetype()
   },
   methods: {
     getCardsList(){
@@ -20,6 +21,11 @@ export default {
         //this.cardsList = result.data.data;
         store.cardsList = result.data.data;
       });
+    },
+    selectArchetype(){
+      axios.get(store.apiArcheUrl).then((result) => {
+        store.archetypeList = result.data;
+      })
     }
   },
   data() {
