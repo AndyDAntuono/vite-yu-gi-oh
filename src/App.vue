@@ -37,9 +37,10 @@ export default {
   <main>
     <!-- <CardsList :cards="cardsList"/> -->
     <CardsList />
+    <button class="btn btn-primary">push</button>
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use './styles/generals.scss';
 </style>
