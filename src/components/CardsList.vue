@@ -6,7 +6,7 @@
             </div>-->
             <!--COSA CAVOLO DEVO SCRIVERE PER SELEZIONARE L'IMMAGINE?!?!-->
             <div class="col-4" v-for="card in store.cardsList" :key="card.id">
-                <img :src="card.card_images?.image_url_small" alt="">
+                <img :src="card.card_images[0].image_url" alt="">
                 {{ card.name }}
             </div>
         </div>
