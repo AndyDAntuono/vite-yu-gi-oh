@@ -4,10 +4,13 @@
             <!--<div class="col-4" v-for="card in cards" :key="card.id">
                 {{ card.name }}
             </div>-->
-            <!--COSA CAVOLO DEVO SCRIVERE PER SELEZIONARE L'IMMAGINE?!?!-->
             <div class="col-4" v-for="card in store.cardsList" :key="card.id">
-                <img :src="card.card_images[0].image_url" alt="">
-                {{ card.name }}
+                <div class="card">
+                    <img :src="card.card_images[0].image_url" alt="">
+                    <div class="card-title">
+                        {{ card.name }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,6 +32,6 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     
 </style>
