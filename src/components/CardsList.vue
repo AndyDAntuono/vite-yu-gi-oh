@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <select class="form-select form-select-lg mb-3" v-model="store.cardArchetype" aria-label="Large select example">
+                <select class="form-select form-select-lg mb-3" v-model="store.cardArchetype" @change="changeCard()">
                     <option selected>Seleziona la carta</option>
                     <option v-for="(cardArchetype, index) in store.archetypeList" :key="index" :value="cardArchetype.archetype_name">
                         {{ cardArchetype.archetype_name }}</option>
@@ -99,6 +99,11 @@ export default {
     data() {
         return {
             store
+        }
+    },
+    methods: {
+        changeCard(){
+            this.$emit('filter')
         }
     }
 }

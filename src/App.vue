@@ -15,6 +15,9 @@ export default {
   },
   methods: {
     getCardsList(){
+      if (store.cardArchetype != '') {
+        store.apiUrl += `&archetype=${store.cardArchetype}`
+      }
       // Effettua una richiesta GET all'URL specificato da store.apiUrl utilizzando Axios
       axios.get(store.apiUrl).then((result) => {
         //Se la richiesta ha successo, assegna i dati ottenuti (result.data.data) a store.cardsList
@@ -42,8 +45,7 @@ export default {
   <AppHeader />
   <main>
     <!-- <CardsList :cards="cardsList"/> -->
-    <CardsList />
-    <button class="btn btn-primary">push</button>
+    <CardsList @filter="getCardsList"/>
   </main>
 </template>
 
