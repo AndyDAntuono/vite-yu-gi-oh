@@ -4,8 +4,8 @@
             <!--<div class="col-4" v-for="card in cards" :key="card.id">
                 {{ card.name }}
             </div>-->
-            <div class="col-4" v-for="card in store.cardsList" :key="card.id">
-                <div class="card">
+            <div class="col-3 PY-2" v-for="card in store.cardsList" :key="card.id">
+                <div class="card mb-3">
                     <img :src="card.card_images[0].image_url" alt="">
                     <div class="card-title">
                         {{ card.name }}
